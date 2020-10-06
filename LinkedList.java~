@@ -1,0 +1,40 @@
+public class TopStreamingArtist{
+  public Artist first;
+  public Artist last;
+  public TopStreamingArtist(){
+    first=null;
+    last=null;
+  }
+  public boolean isEmpty(){
+    return(first==null);  
+  }
+  public void insertFirst(String s){
+    Artist x=new Artist(s);
+    if(isEmpty())
+      last=x;
+    x.next=first;
+    first=x;
+  }
+  public void insertLast(String s){
+    Artist x=new Artist(s);
+    if(isEmpty())
+      first=x;
+    else
+      last.next=x;
+    last=x;
+  }
+  public void deleteFirst(){
+    if(first.next==null)
+      lasr=null;
+    first=first.next;
+  }
+  public void displayList(){
+    Artist current=first;
+    while(current!=null){
+      current.displayNode();
+      current=current.next;
+    }
+    
+  }  
+    
+}

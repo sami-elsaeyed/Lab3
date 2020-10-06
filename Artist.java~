@@ -1,0 +1,12 @@
+import java.util.*;
+public class Artist{
+  private String name;
+  private Artist next;
+  public Artist(String s){
+    name=s;
+  }
+  public void displayNode(){
+    PrintWriter output=new PrintWriter("TopArtists");
+    output.println(name);
+  }
+}
